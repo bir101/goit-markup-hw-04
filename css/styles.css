@@ -139,27 +139,26 @@ h3 {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+  --color2: var(--accent-color)
 }
 
-.contact-link--tel::before{
-  display: inline-flex;
+.contact-link--tel{
+    margin-right: 10px;
+   width: 14px;
+  height: 19px;
+  fill: currentColor;
+    
+} 
+
+.contact-link--mail{
   margin-right: 10px;
-  align-items: center;
-  content: '';
-  width: 10px;
-  height: 15px;
-  background-image: url(../images/tel.svg);
-   
+  width: 18px;
+  height: 14px;
+  fill: currentColor;
+  
+ 
 }
-.contact-link--mail::before{
-  display: inline-flex;
-  margin-right: 10px;
-  align-items: center;
-  content: '';
-  width: 16px;
-  height: 11px;
-  background-image: url(../images/mail.svg);
-}
+
 /* hero */
 .hero {
   text-align: center;
@@ -242,7 +241,8 @@ h3 {
 }
 .buttom-social {
   display: inline-flex;
-   
+  justify-content: center;
+  align-items: center; 
   color: #afb1b8;
   border-radius: 50%;
   width: 44px;
@@ -250,27 +250,49 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
 }
+.social-list__item{
+  margin-right: 10px;
+}
 .buttom-social:hover,
 .buttom-social:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+ 
+  --color1:  #ffffff;;
   
 }
 
 
 .buttom-socal--instagram{
-  background-image: url(../images/instagram.svg);
+ width: 20px;
+ height: 20px;
+ fill: currentColor;
 }
 .buttom-socal--twitter{
-  background-image: url(../images/twitter.svg);
+ width: 20px;
+ height: 20px;
+ fill: currentColor;
 }
 .buttom-socal--facebook{
-  background-image: url(../images/facebook.svg);
+ width: 20px;
+ height: 20px;
+ fill: currentColor;
 }
 .buttom-socal--linkedin{
-  background-image: url(../images/linkedin.svg);
+  width: 20px;
+ height: 20px;
+ fill: currentColor;
 }
 
+.footer .buttom-socal--instagram,
+.footer .buttom-socal--twitter,
+.footer .buttom-socal--facebook,
+.footer .buttom-socal--linkedin{
+  
+  --color1: #ffffff;
+}
+ .buttom-social--inverse{
+  background-color:  rgba(255, 255, 255, 0.1);;
+}
 
 /* section */
 .section {
@@ -293,10 +315,11 @@ h3 {
   line-height: 1.7;
 }
 /* Фоновые изображения для перимуществ */
-.advantages-background::before{
+.advantages-background{
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
-  content: '';
   width: 270px;
   height: 120px;
   background-color: #F5F4FA;
@@ -305,14 +328,12 @@ h3 {
   background-repeat: no-repeat;
   
 }
-  .advantages-background:nth-child(1)::before{
-  background-image: url(../images/p1.svg);}
-  .advantages-background:nth-child(2)::before{
-  background-image: url(../images/p2.svg);}
-  .advantages-background:nth-child(3)::before{
-  background-image: url(../images/p3.svg);}
-  .advantages-background:nth-child(4)::before{
-  background-image: url(../images/p3.svg);}
+.icon-p{
+  width: 70px;
+  height: 70px;
+  
+}
+
 
 .list /*преимущества, постоянные клиенты*/ ,
 .section-list /*чем мы занимаемся*/,
@@ -322,6 +343,7 @@ h3 {
 }
 
 .list .item {
+  
   width: 270px;
 }
 .list .item:not(:first-child) {
@@ -361,12 +383,12 @@ h3 {
 }
 
 
-
 .work-list .image {
   margin-bottom: 30px;
 }
 
 .work-list .item {
+
   padding-bottom: 24px;
   background-color: var(--primary-white-color);
 
@@ -407,21 +429,37 @@ h3 {
 
 /* фоновые изображения клиенты  */
 .client-background{
-  display: inline-flex;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  
  
 }
-.client-background--c1{background-image: url(../images/client1.svg);}
-.client-background--c2{background-image: url(../images/client2.svg);}
-.client-background--c3{background-image: url(../images/client3.svg);}
-.client-background--c4{background-image: url(../images/client4.svg);}
-.client-background--c5{background-image: url(../images/client5.svg);}
-.client-background--c6{background-image: url(../images/client6.svg);}
+
+.client-background--icon{
+  
+width: 70%;
+height: 70%;
+
+  fill: #AFB1B8;
+}
+.client-background:hover
+.client-background--icon{
+  
+  
+  --color1: var(--accent-color);
+  
+}
+.client-background:hover{
+  border: 1px solid var(--accent-color);
+}
   
 
 /* портфолио */
