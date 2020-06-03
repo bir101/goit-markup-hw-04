@@ -13,13 +13,13 @@
   <body>
     <!-- шапка сайта -->
     <header>
-      <!-- <div class="container"> -->
+      
 
         <nav class="nav container">
           <a href="/" class="logo"> <span>Web</span> Studio </a>
 
           <ul class="site-nav">
-            <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+            <li class="item"><a href="./index.html" class="link current  curent--line">Студия</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
             <li class="item"><a href="/" class="link">Контакты</a></li>
           </ul>
@@ -27,8 +27,8 @@
           <ul class="contact-nav">
             <li class="item">
               <a href="mailto:info@devstudio.com" class="contact-link "> 
-                <svg class="contact-link--mail"><use href="./images/symbol-defs.svg#icon-mail"></use></svg> info@devstudio.com</a
-              >
+                <svg class="contact-link--mail"><use href="./images/symbol-defs.svg#icon-mail">
+                </use></svg> info@devstudio.com</a>
             </li>
             <li class="item ">
               <a href="tel:+380961111111" class="contact-link "><svg class="contact-link--tel" >
@@ -38,7 +38,7 @@
             </li>
           </ul>
         </nav>
-      <!-- </div> -->
+      
     </header>
     <main>
       <!-- фон + кнопка(ссылка) -->
@@ -111,41 +111,29 @@
       <section class="section">
         <div class="container ">
           <h2 class="section-title">Чем мы занимаемся</h2>
+
           <ul class="section-list">
             <li class="item">
               <a href="/" class="button-feture"
-                ><img
-                  src="./images/notebook.jpg"
-                  alt="ноутбук"
-                  width="370"
-                  
-                  class="image"
-                />
-                <h3 class="text-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+                >
+                <div class="section-list_thumb">
+                   <img src="./images/notebook.jpg" alt="ноутбук" width="370"  height="294" class="image" />
+                   <h3 class="text-title ">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="/" class="button-feture">
-                <img
-                  src="./images/phone.jpg"
-                  alt="смартфон"
-                  width="370"
-                  
-                  class="image"
-                />
-                <h3 class="text-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+                <div class="section-list_thumb"><img src="./images/phone.jpg" alt="смартфон" width="370"  height="294" class="image" />
+                <h3 class="text-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3></div>
               </a>
             </li>
             <li class="item">
               <a href="/" class="button-feture">
-                <img
-                  src="./images/desktop.jpg"
-                  alt="десктоп"
-                  width="370"
-                  
-                  class="image"
-                />
-                <h3 class="text-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+                <div class="section-list_thumb">
+                  <img src="./images/desktop.jpg" alt="десктоп" width="370" height="294" class="image" />
+                  <h3 class="text-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+                </div>
               </a>
             </li>
           </ul>
