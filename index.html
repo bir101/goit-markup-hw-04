@@ -149,8 +149,8 @@
           <ul class="work-list">
             <li class="item">
               <div class="card-image">
-                <img src="./images/johnsmithg.jpg" alt="John Smith" width="270px" class="image card__face" />
-                <figcaption class="card__face card__face--back">Product Designer</figcaption>
+                <img src="./images/johnsmithg.jpg" alt="John Smith" width="270" height="294" class="image card__face" />
+                <b class="card__face card__face--back">Product Designer</b>
               </div>
               <h3 class="title">John Smith</h3>
               <p class="text">Product Designer</p>
@@ -190,7 +190,7 @@
             <li class="item">
               <div class="card-image">
                 <img src="./images/martastewart.jpg" alt="Marta Stewart" width="270" class="image card__face" />
-                <figcaption class="card__face card__face--back">Frontend Developer</figcaption>
+                <b class="card__face card__face--back">Frontend Developer</b>
               </div>
               <h3 class="title">Marta Stewart</h3>
               <p class="text">Frontend Developer</p>
@@ -229,7 +229,7 @@
             <li class="item">
               <div class="card-image">
                 <img src="./images/robertjakis.jpg" alt="Robert Jakis" width="270" class="image card__face" />
-                <figcaption class="card__face card__face--back">Marketing</figcaption>
+                <b class="card__face card__face--back">Marketing</b>
               </div>
               <h3 class="title">Robert Jakis</h3>
               <p class="text">Marketing</p>
@@ -268,7 +268,7 @@
             <li class="item">
               <div class="card-image">
                 <img src="./images/martindoe.jpg" alt="Martin Doe" width="270" class="image card__face" />
-                <figcaption class="card__face card__face--back">UI Designer</figcaption>
+                <b class="card__face card__face--back">UI Designer</b>
               </div>
 
               <h3 class="title">Martin Doe</h3>
@@ -404,7 +404,7 @@
           <b class="footer-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
           <div>
             <label for="mail">E-mail</label>
-            <input type="mail" id="mail" class="footer_subscribe--input" />
+            <input type="email" id="mail" class="footer_subscribe--input" />
             <a href="/" class="button-primary button-primary--footericon">Подписаться</a>
           </div>
         </div>
@@ -413,61 +413,53 @@
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
 
-    <!-- Модальное окно -->
+    <!-- Модальное окно/ -->
+
     <div class="backdrop backdrop--hidden" data-backdrop>
       <div class="modal">
         <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
 
-        <form action="" class="modal-form">
-          <div class="modal-form__field">
-            <label for="user-name" class="modal-form__label">Имя</label>
-            <input type="text" name="user-name" id="user-name" class="modal-form__input" />
-          </div>
+        <form action="modal" class="modal-form js-speaker-form">
+          <label for="user-name" class="modal-form__label">
+            <svg class="modal-form__icon">
+              <use href="./images/form-icon.svg#icon-formname"></use>
+            </svg>
+            Имя<input type="text" name="user-name" id="user-name" class="modal-form__input" />
+          </label>
 
-          <div class="modal-form__field">
-            <label for="tel" class="modal-form__label">Телефон</label>
-            <input type="tel" name="tel" id="tel" class="modal-form__input" />
-          </div>
+          <label class="modal-form__label">
+            <svg class="modal-form__icon">
+              <use href="./images/form-icon.svg#icon-formtel"></use>
+            </svg>
+            Телефон
+            <input type="tel" name="tel" class="modal-form__input" />
+          </label>
 
-          <div class="modal-form__field">
-            <label for="mail" class="modal-form__label">Почта</label>
-            <input type="mail" name="mail" id="mail" class="modal-form__input" />
-          </div>
+          <label class="modal-form__label">
+            <svg class="modal-form__icon">
+              <use href="./images/form-icon.svg#icon-formmail"></use>
+            </svg>
+            Почта
+            <input type="email" name="form-mail" class="modal-form__input" />
+          </label>
 
-          <div class="modal-form__field">
-            <label for="comment" class="modal-form__label">Комментарий</label>
-            <textarea name="comment" id="comment" cols="30" rows="10" class="modal-form__input"></textarea>
-          </div>
+          <label class="modal-form__label"
+            >Комментарий
+            <textarea name="comment" cols="30" rows="10" class="modal-form__input"></textarea>
+          </label>
 
-          <div role="group" class="group">
-            <input type="checkbox" name="" id="agree" />
-            <label for="agree" class="modal-form__label">Согласен с рассылкой и принимаю Условия договора</label>
-          </div>
+          <label class="group"
+            ><input type="checkbox" name="agree" />Согласен с рассылкой и принимаю
+            <span class="modal-form__label--accent">Условия договора</span>
+          </label>
+
+          <button type="submit" class="button-primary button-primary--modal">Отправить</button>
         </form>
 
-        <button type="submit" class="button-primary button-primary--modal" data-close-modal>Отправить</button>
+        <div class="modal-form--close" data-close-modal></div>
       </div>
     </div>
-
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('backdrop--hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
-    </script>
+    <script src="./modal-form.js"></script>
+    <script src="./submit.js"></script>
   </body>
 </html>
